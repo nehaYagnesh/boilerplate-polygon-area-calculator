@@ -66,31 +66,32 @@ class Square(Rectangle):
     def __init__(self,side):
         self.width = side
         self.height = side
+        self.side = side
 
     def __str__(self):
         string_s = f'{type(self).__name__}(side={self.side})'
         return string_s
 
-    def set_side(self,side):
+    def set_side(self, side):
         self.side = side
         self.width = side
         self.height = side
 
-    def set_width(self,side):
-        self.width = side
+    def set_width(self, side):
+        self.side = side
     
-    def set_height(self,side):
-        self.height = side
+    def set_height(self, side):
+        self.side = side
 
-rect = Rectangle(10, 5)
+# rect = Rectangle(10, 5)
 
-sq = Square(9)
-sq.set_side(4)
-print(sq)
+# sq = Square(9)
+# sq.set_side(4)
+# print(sq)
 
-sq.set_height(8)
-print(sq)
-sq.set_width(16)
-print(sq)
+# sq.set_height(8)
+# print(sq)
+# sq.set_width(16)
+# print(sq)
 
     
