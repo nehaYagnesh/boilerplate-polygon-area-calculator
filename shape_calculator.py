@@ -51,19 +51,11 @@ class Rectangle:
         while area_home >= area_guest:
             area_home = area_home - area_guest
             counter += 1
-        # if type(shape) == Square:
-        #     fit_shape_number = int(shape.get_area() 
-        #                        / (self.width * self.height))
-        # else:
-        #     fit_shape_number = int(self.get_area()
-        #                         / (shape.width * shape.height))
         return counter
     
-    
 class Square(Rectangle):
-    
     side = 0
-    def __init__(self,side):
+    def __init__(self, side):
         self.width = side
         self.height = side
         self.side = side
@@ -82,16 +74,5 @@ class Square(Rectangle):
     
     def set_height(self, side):
         self.side = side
-
-# rect = Rectangle(10, 5)
-
-# sq = Square(9)
-# sq.set_side(4)
-# print(sq)
-
-# sq.set_height(8)
-# print(sq)
-# sq.set_width(16)
-# print(sq)
 
     
