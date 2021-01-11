@@ -1,14 +1,12 @@
 import math
 
 class Rectangle:
-
     def __init__(self, width, height):
         self.width = width
         self.height = height
 
     def __str__(self):
-        string_r = f'{type(self).__name__}(width={self.width}, height={self.height})'
-        return string_r
+        return f'{type(self).__name__}(width={self.width}, height={self.height})'
 
     def set_width(self, width):
         self.width = width
@@ -24,7 +22,7 @@ class Rectangle:
 
     def get_diagonal(self):
         diagonal = math.sqrt(pow(self.width, 2)
-                        + pow(self.height, 2))
+                    + pow(self.height, 2))
         return diagonal
 
     def get_picture(self):
@@ -38,7 +36,6 @@ class Rectangle:
             r_pattern += '\n'
         return r_pattern
         
-    
     def get_amount_inside(self, shape):
         area_guest = shape.get_area()
         counter = 0
@@ -50,16 +47,14 @@ class Rectangle:
     
 class Square(Rectangle):
     def __init__(self, side):
-        self.width = side
-        self.height = side
+        super().__init__(side,side)
 
     def __str__(self):
-        string_s = f'{type(self).__name__}(side={self.width})'
-        return string_s
+        return f'{type(self).__name__}(side={self.width})'
 
     def set_side(self, side):
-        self.width = side
-        self.height = side
+        self.set_width(side)
+        self.set_height(side)
 
 
     
