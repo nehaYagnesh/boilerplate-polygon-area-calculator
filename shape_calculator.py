@@ -1,8 +1,6 @@
 import math
 
 class Rectangle:
-    width = 0
-    height = 0
 
     def __init__(self, width, height):
         self.width = width
@@ -14,18 +12,15 @@ class Rectangle:
 
     def set_width(self, width):
         self.width = width
-        self.side = width
 
     def set_height(self, height):
         self.height = height
 
     def get_area(self):
-        area = self.width * self.height
-        return area
+        return self.width * self.height
 
     def get_perimeter(self):
-        perimeter = 2* (self.width + self.height)
-        return perimeter
+        return (2* (self.width + self.height))
 
     def get_diagonal(self):
         diagonal = math.sqrt(pow(self.width, 2)
@@ -39,7 +34,7 @@ class Rectangle:
         r_pattern = ''
         for _ in range(self.height):
             for _ in range(self.width):
-                r_pattern += ''.join('*')
+                r_pattern += '*'
             r_pattern += '\n'
         return r_pattern
         
@@ -54,25 +49,17 @@ class Rectangle:
         return counter
     
 class Square(Rectangle):
-    side = 0
     def __init__(self, side):
         self.width = side
         self.height = side
-        self.side = side
 
     def __str__(self):
-        string_s = f'{type(self).__name__}(side={self.side})'
+        string_s = f'{type(self).__name__}(side={self.width})'
         return string_s
 
     def set_side(self, side):
-        self.side = side
         self.width = side
         self.height = side
 
-    def set_width(self, side):
-        self.side = side
-    
-    def set_height(self, side):
-        self.side = side
 
     
